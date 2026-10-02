@@ -58,8 +58,8 @@ def run_training_pipeline():
             (
                 "model",
                 RandomForestRegressor(
-                    n_estimators=100,
-                    random_state=42,
+                    n_estimators=100, # Quantas árvores serao criadas para tomar a decisão
+                    random_state=42, # Garante que os resultados sejam reproduzíveis
                 ),
             ),
         ]
@@ -86,8 +86,8 @@ def run_training_pipeline():
             (
                 "model",
                 RandomForestRegressor(
-                    n_estimators=100,
-                    random_state=42,
+                    n_estimators=100, # Quantas árvores serao criadas para tomar a decisão
+                    random_state=42, # Garante que os resultados sejam reproduzíveis
                 ),
             ),
         ]
