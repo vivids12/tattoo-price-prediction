@@ -5,6 +5,7 @@ from src.prediction.service import predict_price_and_time
 def test_predict_price_and_time():
     features = {
         "descricao": "Dragao oriental",
+        "estilo": "oriental",
         "tamanho_cm": 25,
         "vermelho": 1,
         "preto": 1,

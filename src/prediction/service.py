@@ -15,6 +15,7 @@ TIME_MODEL_PATH = MODELS_DIR / "time_model.joblib"
 
 FEATURES = [
     "descricao",
+    "estilo",
     "tamanho_cm",
     "vermelho",
     "preto",
@@ -78,6 +79,9 @@ def predict_price_and_time(features: dict) -> dict:
 
     if not isinstance(features["local"], str) or not features["local"].strip():
         raise ValueError("O local deve ser informado.")
+
+    if not isinstance(features["estilo"], str) or not features["estilo"].strip():
+        raise ValueError("O estilo deve ser informado.")
 
     # Carrega os modelos treinados
     price_model, time_model = load_models()

@@ -4,7 +4,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 
 TEXT_FEATURE = "descricao"
-CATEGORICAL_FEATURES = ["local"]
+CATEGORICAL_FEATURES = ["local", "estilo"]
 NUMERIC_FEATURES = [
     "tamanho_cm",
     "vermelho",
@@ -26,7 +26,7 @@ def create_preprocessor():
                 TEXT_FEATURE,
             ),
             (
-                "local",
+                "categorical",
                 OneHotEncoder(handle_unknown="ignore"),
                 CATEGORICAL_FEATURES,
             ),

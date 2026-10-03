@@ -9,6 +9,7 @@ def test_preprocessor():
         [
             {
                 "descricao": "Dragão oriental",
+                "estilo": "oriental",
                 "tamanho_cm": 25,
                 "vermelho": 1,
                 "preto": 1,
@@ -16,6 +17,7 @@ def test_preprocessor():
             },
             {
                 "descricao": "Rosa pequena",
+                "estilo": "minimalista",
                 "tamanho_cm": 8,
                 "vermelho": 1,
                 "preto": 0,
@@ -38,6 +40,7 @@ def test_preprocessor_transforms_features_correctly():
         [
             {
                 "descricao": "Dragão oriental",
+                "estilo": "oriental",
                 "tamanho_cm": 25,
                 "vermelho": 1,
                 "preto": 1,
@@ -45,6 +48,7 @@ def test_preprocessor_transforms_features_correctly():
             },
             {
                 "descricao": "Rosa pequena",
+                "estilo": "minimalista",
                 "tamanho_cm": 8,
                 "vermelho": 1,
                 "preto": 0,
@@ -73,6 +77,7 @@ def test_preprocessor_transforms_features_correctly():
 
     assert any("descricao" in name for name in feature_names)
     assert any("local" in name for name in feature_names)
+    assert any("estilo" in name for name in feature_names)
     assert any("tamanho_cm" in name for name in feature_names)
     assert any("vermelho" in name for name in feature_names)
     assert any("preto" in name for name in feature_names)

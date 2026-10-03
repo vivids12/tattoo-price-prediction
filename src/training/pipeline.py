@@ -12,6 +12,7 @@ from src.preprocessing.preprocessor import create_preprocessor
 
 FEATURES = [
     "descricao",
+    "estilo",
     "tamanho_cm",
     "vermelho",
     "preto",

@@ -15,6 +15,7 @@ def predict():
 
     campos_obrigatorios = [
         "descricao",
+        "estilo",
         "tamanho_cm",
         "vermelho",
         "preto",
@@ -35,6 +36,7 @@ def predict():
     try:
         features = {
             "descricao": str(dados["descricao"]),
+            "estilo": str(dados["estilo"]),
             "tamanho_cm": float(dados["tamanho_cm"]),
             "vermelho": int(dados["vermelho"]),
             "preto": int(dados["preto"]),
